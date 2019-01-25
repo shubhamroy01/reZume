@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+body{background-image: url(images/laptop3.jpg);background-size: cover;height:110%;background-attachment:fixed;margin:0;padding:0}
+.img_logo{margin-left:8px;width:135px;height:125px;position: fixed;}
+.tagline{text-align:center;color:#757575;font-size:65px;cursor: pointer;margin-top: 15px}
+.div_1{text-align: left;height: 1890px;width: 60%;background-color: #ffffff;padding:8px 35px 0px 35px;border-radius:35px;margin-bottom:8%;font-size: 20px}
+.div_2{text-align: left;height: 1890px;width: 60%;background-color: #ffffff;padding:8px 35px 0px 35px;border-radius:35px;margin-bottom:8%;font-size: 20px}
+.heading{text-align: center;color:#212121;font-size:35px;cursor: pointer;}
+.sup{color: #aa0000}
+.input{float: right;margin-right: 30%;width:275px}
+textarea{margin-left: 15%;margin-top:2%;width: 70%;height: 110px}
+#create{margin-top: 20px}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#create").click(function(){
+        $("#name").append(function(n){
+            return ($('#nm').val());
+        });
+        $("#phone").append(function(n){
+            return ($('#ph').val());
+        });
+        $("#add1").append(function(n){
+            return ($('#ad1').val());
+        });
+                $("#add2").append(function(n){
+            return ($('#ad2').val());
+        });
+                $("#add3").append(function(n){
+            return ($('#ad3').val());
+        });
+                        $("#email").append(function(n){
+            return ($('#em').val());
+        });
+                        $("#education").append(function(n){
+            return ($('#edu').val());
+        });
+                        $("#awards").append(function(n){
+            return ($('#aw').val());
+        });
+                        $("#jdescription").append(function(n){
+            return ($('#jd').val());
+        });
+                        $("#worke").append(function(n){
+            return ($('#we').val());
+        });
+                        $("#languagesk").append(function(n){
+            return ($('#lk').val());
+        });
+                        $("#computers").append(function(n){
+            return ($('#cs').val());
+        });
+    });
+});
+</script>
+<script type="text/javascript">
+function printContent(el){
+	var restorepage = document.body.innerHTML;
+	var printcontent = document.getElementById(el).innerHTML;
+	document.body.innerHTML = printcontent;
+	window.print();
+	document.body.innerHTML = restorepage;
+}
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("#create").click(function(){
+$("#create").css("display","none");
+    });
+$("#create").click(function(){
+$("#get").css("display","block");
+    });
+});
+
+</script>
+<script type="text/javascript">
+    window.onload = function() {
+        document.getElementById('ifYes').style.display = 'none';
+    }
+
+    function yesnoCheck() {
+        if (document.getElementById('yesCheck').checked) {
+            document.getElementById('jdl').style.display = 'block';
+            document.getElementById('jds').style.display = 'block';
+        } 
+        else {
+            document.getElementById('jdl').style.display = 'none';
+            document.getElementById('jd').style.display = 'none';
+            document.getElementById('jds').style.display = 'none';
+        }
+    }
+
+</script>
+</head>
+<body>
+<a href="index.html"><img src="images/logo.png" class="img_logo"title="reZume"></a><br>
+<h1 class="tagline">Resume form</h1>
+<center><div class="div_1">
+<h1 class="heading">Personal Details</h1><br>
+<form>
+<label><sup class="sup">*</sup>Name</label><input type="text" placeholder="Name" name="name" class="input" id="nm"><br><br><br>
+<label><sup class="sup">*</sup>Gender</label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="radio" name="gender" value="Mr" checked><label>Male</label>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="radio" name="gender" value="Miss"><label>Female</label>&nbsp;&nbsp;
+    <input type="radio" name="gender" value=""><label>Other</label><br><br><br>
+    <label><sup class="sup">*</sup>Phone</label><input type="text" placeholder="Phone" name="phone" class="input" id="ph"><br><br><br>
+    <label><sup class="sup">*</sup>Address line 1</label><input type="text" placeholder="House No, Flat No, Buliding No, Area, Locality" name="ad" class="input" id="ad1"><br><br><br>
+    <label><sup class="sup">*</sup>Address line 2</label><input type="text" placeholder="City, Town, " name="ad" class="input" id="ad2"><br><br><br>
+    <label><sup class="sup">*</sup>Address line 3</label><input type="text" placeholder="State" name="ad" class="input" id="ad3"><br><br><br>
+    <label><sup class="sup">*</sup>Email</label><input type="text" placeholder="email" name="email" class="input" id="em"><br><br><br>
+    <label><sup class="sup">*</sup>Education</label><br><textarea id="edu" placeholder="Detailed description of your qualifications"></textarea><br><br><br>
+    <label>&nbsp;Honors And Awards</label><br><textarea id="aw" placeholder="Detailed description of your honors and awards"></textarea><br><br><br>
+    <label><sup class="sup">*</sup>Job Status</label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="radio" onclick="javascript:yesnoCheck()" name="yesno" id="noCheck" checked/>
+    <label>Previously not working</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" onclick="javascript:yesnoCheck()" name="yesno" id="yesCheck"/>
+    <label>Previously working</label><br><br><br>
+        <div id="jdl" style="display:none">
+            <label >Job Discription</label><br><textarea placeholder="Detailed description of your previous jobs" id="jd"></textarea><br><br><br>
+            <label>Work Experience</label><br><textarea placeholder="All your previous work experience" id="we"></textarea></div><br><br>
+            <label>Languages Known</label><br><textarea placeholder="List the languages that you know, along with your level of proficiency. Use an appropriate proficiency scale such as the ACTFL which provides guidelines for Novice, Intermediate, Advanced, Superior, and Distinguished levels in Listening, Speaking, Reading, and Writing." id="lk"></textarea><br><br>
+            <label>Computer Skills</label><br><textarea placeholder="It may be useful to provide a summary of your relevant skills, such as your computer skills. You could list your skills using a consistent format such as" id="cs"></textarea>
+                <center><input type="button" name="Create" value="Create"  id="create">
+                <input type="button" name="Create" value="Get your CV"  onclick="printContent('div_2')" id="get" style="display: none;"></center></form></div>
+
+
+        <div class="div_2" id="div_2">
+            <h1 style="text-align: center;">Resume</h1>
+            <h1 id="name"></h1>
+            <span>Phone:</span>&nbsp;<span id="phone"></span><span id="add1" style="float: right;"></span><span style="float: right;">Address:&nbsp;&nbsp;</span><br><span>Email:</span>&nbsp;<span id="email"></span><span id="add3" style="float: right;">,&nbsp;</span><span id="add2" style="float: right;"></span><br><br><br><p><strong>Education</strong></p><hr><span id="education"></span><br><br><br><p><strong>Honors And Awards</strong></p><hr><span id="awards"></span><br><br><br><p><strong>Job Status</strong></p><hr><span id="jdescription"></span><br><br><br><p><strong>Work Experience</strong></p><hr><span id="worke"></span><br><br><br><p><strong>Languages Known</strong></p><hr><span id="languagesk"></span><br><br><br><p><strong>Computer Skills</strong></p><hr><span id="computers"></span>
+        </div></center>
+</body>
+</html>

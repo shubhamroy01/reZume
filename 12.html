@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form for CV</title>
+<style type="text/css">
+body{background-image: url(images/laptop3.jpg);background-size: cover;height:110%;background-attachment:fixed;margin:0;padding:0}
+.img_logo{margin-left:8px;width:135px;height:125px;position: fixed;}
+.tagline{text-align:center;color:#757575;font-size:65px;cursor: pointer;margin-top: 15px}
+.div_1{text-align: left;height: 1890px;width: 60%;background-color: #ffffff;padding:8px 0px 0px 20px;border-radius:35px;margin-bottom:8%;font-size: 20px}
+.heading{text-align: center;color:#212121;font-size:35px;cursor: pointer;}
+.sup{color: #aa0000}
+.input{float: right;margin-right: 34%;width:250px}
+textarea{margin-left: 15%;margin-top:2%;width: 70%;height: 110px}
+.image{margin-left: 16%}
+.button{border-radius: 25px;
+    padding: 20px; 
+    width: 125px;
+    height: 18px;
+    background-color:#ce93d8;
+    margin-left: 8px;margin-right: 7px;margin-top:8%;
+    color:#000000;
+    font-size: 18px
+}
+</style>
+<!-- Date picker -->
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.8.23/themes/base/jquery-ui.css">
+<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+<script src="http://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+<link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+<script>
+$(function() {
+$( "#datepicker" ).datepicker();
+});
+</script>
+<!-- Date picker -->
+<!-- image uplode -->
+<script>function readURL(e) {
+    if (this.files && this.files[0]) {
+        var reader = new FileReader();
+        $(reader).load(function(e) { $('#blah').attr('src', e.target.result); });
+        reader.readAsDataURL(this.files[0]);
+    }
+}
+
+$("#imgInp").change(readURL);
+</script>
+<!-- image uplode -->
+</head>
+<body>
+<a href="index.html"><img src="images/logo.png" class="img_logo"title="reZume"></a><br><h1 class="tagline">Resume form</h1>
+<center><div class="div_1"><h1 class="heading">Personal Details</h1><br><form><label><sup class="sup">*</sup>First Name</label><input type="text" placeholder="First Name" name="fname" class="input"><br><br><br><label>Uplode your photo</label><input type='file' id="imgInp" onchange="readURL(this);" / class="image"><br><br><label class="sup">(recommended but not mandatory)</label>
+	<br><br><br><label>&nbsp;Middle Name <span class="sup">(optional)</span></label><input type="text" placeholder="Middle Name" name="mname" class="input"><br><br><br><label><sup class="sup">*</sup>Last Name</label><input type="text" placeholder="Last Name" name="lname" class="input"><br><br><br><label><sup class="sup">*</sup>Gender</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" value="male"><label>Male</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" value="female"><label>Female</label>&nbsp;&nbsp;<input type="radio" name="gender" value="other"><label>Other</label><br><br><br><label><sup class="sup">*</sup>Date Of Birth (D.O.B.)</label><input type="text" id="datepicker" class="input" placeholder="(MM/DD/YYYY)"><br><br><br><label><sup class="sup">*</sup>Qualification</label>&nbsp;&nbsp;&nbsp;<input type="checkbox" name="Qualification"><label>Class 10<sup>th</sup></label>&nbsp;<input type="checkbox" name="Qualification"><label>Class 12<sup>th</sup></label>&nbsp;<input type="checkbox" name="Qualification"><label>Class 10+2</label>&nbsp;<input type="checkbox" name="Qualification"><label>Graduate</label>&nbsp;<input type="checkbox" name="Qualification"><label>Post Graduate</label><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="Qualification"><label>Doctorate(PhD)</label><br><br><br><label>Description of Qualification</label><br><textarea placeholder="Detailed description of your qualifications"></textarea><br><br><br><label>Hobbies</label><br><textarea placeholder="All your hobbies"></textarea><br><br><br><label>Description of awards being received</label><br><textarea placeholder="Complete description of awards being received(award 1, award 2, award 3, award 4, award 5, etc)"></textarea><br><br><br><label><sup class="sup">*</sup>Job Status</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="job" value="fjob"><label>Appling for First Job</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="job" value="ljob"><label>Left a job previously</label><br><br><br><label>Last job description</label><br><textarea placeholder="Reason why you left the last job, salary, post, etc"></textarea><br><br><br><label>Work experience</label><br><textarea placeholder="All your previous working experience"></textarea><br><center><input type="button" name="button" value="Create" class="button"></center></form></div></center>
+</body>
+</html>

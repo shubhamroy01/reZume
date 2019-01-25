@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>reZume.tk</title>
+<link rel="stylesheet" type="text/css" href="CSS/Sign up.css">
+</head>
+<body bgcolor="#fce4ec">
+<div id="div_3">
+<div class="div_2"><br><br><br><center><div class="div_4"><center><br><a href="index.html"><img src="images/logo.png" height="125px" width="200px" title="reZume"></a><br><h1>Sign Up</h1>
+	<form id="contactForm" method="POST">
+	<label>First Name </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Enter Your First Name" id="fname"><br><br><br>
+	<label>Last Name </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Enter Your Last Name" id="lname"><br><br><br>
+	<label>Email </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" placeholder="Enter your Email" id="email"><br><br><br>
+	<label>Password </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" placeholder="Enter your Password"id="pass"><br><br><br>
+	<label>Confirm Password </label><input type="password" placeholder="Confirm Password"id="pass"><br><br><br>
+	<button type="submit"  onclick="btn()" class="button">Sign up</button>
+</form><br>
+<button class="button"><a href="login.html" style="text-decoration:none ; color:#000000">Sign in</a></button>
+<br><br><br>
+</center></div></center><br><br><br></div><br><br>
+</div>
+<script type="text/javascript">
+	function btn(){
+		var a= document.getElementById('pass').value;
+		var c= document.getElementById('email').value;
+		var b= ("123456789a");
+		var d= ("shubham01112000@gmail.com");
+		if(a==b,c==d){
+			window.alert('you have successfully logged in');
+		}
+		else{
+			window.alert('This page is not functioning right now');
+		}
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+body{background-image: url("../images/laptop3.jpg");
+	background-size: cover;
+			padding: 0;
+			margin: 0;
+		}
+.img_logo{margin-left:8px;width:135px;height:125px;position: fixed;}
+.teammembers{float: left;margin-top: 4%;margin-left: 1%;width: 21%;height: 25%;background-color: #ff0000}
+.div_1{position: relative;border-radius: 35px 0px 35px 0px;margin-top: 2%;background-color: rgba(66, 66, 66, 0.8);width: 22%;float: left;margin-left: 2.4%;text-align: center;margin-bottom:10%}
+.tagline{text-align:center;color:#757575;font-size:65px;cursor: pointer;margin-top: 15px;line-height: 40px}
+.img{height: 200px;width: 220px;border-radius:35px;border-color: #29434e}
+p{line-height:7px;}

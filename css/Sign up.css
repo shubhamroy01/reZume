@@ -1,0 +1,39 @@
+#div_1{float: left;height:123px;width:100% ;font-size:34px;background-color:#ffccbc;font-size:20px;color:#ffffff}
+#div_1:hover{color:#aaaa00;box-shadow: 4px 10px 30px #888;
+		transition: color 0.2s linear,box-shadow 0.2s}
+  #Search_bar{width:40%;height:20px}
+  .button{background-color:#ee9043;height:26px;cursor: pointer;}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 8;
+    overflow: hidden;
+    background-color: #ffccbc;
+    font-size: 20px
+}
+
+li {
+    float: left;
+}
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: #ee0000;
+}
+.active:hover {
+    background-color: #fb8c00;
+}
+.Menue:hover{ background-color: #fb8c00;}
+#div_3{}
+.div_2{float:left;width:80%;height:735px;background-color:#ffffff;margin-left:10%;margin-right:10%;margin-top: 70px;box-shadow: 4px 10px 50px #888;}
+.div_4{width:60%;background-color:#eee;margin-left:10%;margin-right:10%;margin-top: 20px;}

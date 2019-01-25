@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>reZume.tk</title>
+<link rel="stylesheet" type="text/css" href="CSS/Sin in.css">
+</head>
+<body bgcolor="#fce4ec">
+<div id="div_3">
+<div class="div_2"><br><br><br><center><div class="div_4"><center><br><a href="index.html"><img src="images/logo.png" height="125px" width="200px" title="Indian Home Appliances"></a><br><h1>Sign in</h1>
+	<form id="contactForm" method="POST">
+	<label>Email </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" placeholder="Email" id="email"><br><br><br>
+	<label>Password </label>&nbsp;&nbsp;&nbsp;<input type="password" placeholder="Password"id="pass"><br><br><br>
+	<button type="submit"  onclick="btn()" class="button">Sign in</button>
+</form><br>
+<button class="button"><a href="Sign up.html" target="Blank" style="text-decoration:none ; color:#000000">Sign Up</a></button>
+<br><br><br>
+</center></div></center><br><br><br></div><br><br>
+</div>
+<script type="text/javascript">
+	function btn(){
+		var a= document.getElementById('pass').value;
+		var c= document.getElementById('email').value;
+		var b= ("123456789a");
+		var d= ("lpu");
+		if(a==b,c==d){
+			window.alert('you have successfully logged in');
+		}
+		else{
+			window.alert('please check you inputs');
+		}
+	}
+</script>
+</body>
+</html>
